@@ -1,23 +1,32 @@
-.checkbox_desc,
-.optiondesc,
-.heading *,
-.head_container *,
+html,
+.actiontable,
+.settingsth_a,
+.ask_action_buttons a,
+.footer a,
 .footer,
-.footer *,
-.greyed,
-div[id*="named_label"],
-td {
-    color: hsl(0, 0%, 70%)!important;
-}
-.CodeMirror-gutters {
-    border-right: 1px solid hsl(0, 0%, 87%)!important;
+.script_tab_head,
+.editormenubar,
+.section_head,
+.section_content,
+.script_details,
+.curtable,
+.scripttr,
+.settingstr *,
+.head_container *,
+.viewer_upper *,
+.viewer_last *,
+.curwaitmsg *,
+.script_desc  {
+    color: hsl(0, 0%, 70%);
 }
 .global_hint_notice > *,
-.global_hint_information > * {
+.global_hint_information > *,
+.global_hint_warning > * {
     background: hsl(0, 0%, 10%) !important;
 }
 .global_hint_notice *,
-.global_hint_information * {
+.global_hint_information *,
+.global_hint_warning > * {
     color: hsl(0, 0%, 90%) !important;
 }
 .head_container {
@@ -114,6 +123,9 @@ a:hover * {
 .scripttable {
     border-bottom: 2px solid hsla(0, 0%, 40%, .4)!important;
 }
+.scripttable td {
+    padding: 6px 5px 2px 5px !important;
+}
 .actiontable tr.clickable:hover,
 .action_issue:hover {
     background-color: hsla(0, 0%, 0%, .3)!important;
@@ -124,16 +136,23 @@ a:hover * {
 html {
     min-height: 100%!important;
     background: hsl(0, 0%, 14%)!important;
-    color: hsl(0, 0%, 70%)!important;
     text-rendering: optimizeLegibility!important;
     -webkit-font-smoothing: antialiased!important;
 }
+
+.ask_action_buttons a, .footer a, .settingstr a {
+  font-weight: bold;
+}
+
 body,
 .tv_content,
 .editor_border,
 .editor_outer,
 .curwaitmsg {
     background: hsl(0, 0%, 14%)!important;
+}
+.curtext {
+  color: inherit !important;
 }
 .actionlayout {
     background: hsl(0, 0%, 14%)!important;
@@ -257,9 +276,13 @@ input[type="button"]:hover *,
     background: -webkit-linear-gradient(top, hsl(0, 0%, 18%) 0, hsl(0, 0%, 13%) 100%)!important;
     border-top: 1px solid #000;
 }
+.icon16 {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.17) 20%, rgba(255, 255, 255, 0) 80%)
+}
 .footer {
+    display: block !important;
+    font-size: 90%;
     border-top: 1px solid hsla(0, 0%, 40%, .4)!important;
-    text-align: right!important;
     padding: 0 4px!important;
     background: hsl(0, 0%, 10%)!important;
 }
@@ -272,6 +295,7 @@ input[type="button"]:hover *,
 .footer a:hover {
     color: hsl(180, 50%, 74%)!important;
 }
+
 @supports (display: -moz-box) {
 input[type="checkbox"] {
     -webkit-filter: invert(.88)grayscale(1)!important;
@@ -306,7 +330,6 @@ select:focus {
 }
 }
 @supports (-webkit-line-clamp: 2) {
-
 /* Codemirror */
 .CodeMirror-hscrollbar {
     background: hsl(0, 0%, 10%)!important;
