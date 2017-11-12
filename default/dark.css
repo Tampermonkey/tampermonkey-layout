@@ -4,7 +4,7 @@ html,
 .ask_action_buttons a,
 .footer a,
 .footer,
-.script_tab_head,
+.script_tab_head *,
 .editormenubar,
 .section_head,
 .section_content,
@@ -16,6 +16,8 @@ html,
 .viewer_upper *,
 .viewer_last *,
 .curwaitmsg *,
+.external_desc,
+.external_label,
 .script_desc  {
     color: hsl(0, 0%, 70%);
 }
