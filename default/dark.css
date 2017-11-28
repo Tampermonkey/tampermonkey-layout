@@ -38,7 +38,7 @@ html,
 body .tv_selected,
 .tv_tab {
     background: hsl(0, 0%, 24%)!important;
-    box-shadow: inset 0 0 0 1px hsl(0, 0%, 44%), inset 0 2px 4px hsla(0, 0%, 40%, .9), inset 0 -6px 0 0 hsla(0, 0%, 40%, .3)!important;
+    box-shadow: inset 0 0 0 1px hsl(0, 0%, 44%), inset 0 2px 4px hsla(0, 0%, 40%, .9), inset 0 -3px 0 0 hsla(0, 0%, 40%, .3)!important;
     color: hsl(0, 0%, 90%)!important;
     text-shadow: none!important;
     transition: opacity .5s!important;
@@ -69,7 +69,7 @@ body .tv_selected *,
     background-color: #000!important;
     width: calc(100% + 8px)!important;
     left: -4px;
-    bottom: 4px;
+    bottom: 2px;
 }
 .tv_tabs_align_alt .tv_tab_alt.tv_selected:first-child:after {
     width: calc(100% + 4px)!important;
@@ -126,12 +126,18 @@ a:hover * {
     border-bottom: 2px solid hsla(0, 0%, 40%, .4)!important;
 }
 .scripttable td {
-    padding: 6px 5px 2px 5px !important;
+    padding: 5px !important;
 }
+
 .actiontable tr.clickable:hover,
 .action_issue:hover {
     background-color: hsla(0, 0%, 0%, .3)!important;
 }
+
+.actiontable .clickable .enabler_disabled, .scripttable .clickable .greyed {
+  color: hsl(0, 0%, 50%)!important;
+}
+
 .actiontable tr:hover {
     background-color: transparent!important;
 }
@@ -162,18 +168,8 @@ body,
 .action_issues {
     background: hsl(0, 0%, 18%)!important;
 }
-div.slider-frame .slider-button {
-    background: hsl(0, 0%, 12%)!important;
-    box-shadow: inset 0 0 0 1px hsl(0, 0%, 50%)!important;
-}
-div.slider-frame.enabler_enabled {
-    background-color: hsl(82, 39%, 24%)!important;
-}
-div.slider-frame {
-    background-color: hsl(0, 0%, 24%)!important;
-}
-div.slider-frame * {
-    color: #fff!important;
+.tr_tabs_alt {
+    background: hsl(0, 0%, 13%)!important
 }
 .tr_tabs:not(.tr_tabs_alt) {
     background: hsl(0, 0%, 14%)!important;
