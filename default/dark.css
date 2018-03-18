@@ -5,7 +5,9 @@ html,
 .footer a,
 .footer,
 .script_tab_head *,
+.submenu tr.entry,
 .editormenubar,
+.submenu,
 .section_head,
 .section_content,
 .script_details,
@@ -92,7 +94,7 @@ img[src$="txt.png"].nameNicon64 {
 .clickable,
 .clickable *,
 .action_issue,
-.action_issue *,
+.action_issue *
 a,
 a * {
     color: hsl(0, 0%, 86%)!important;
@@ -101,6 +103,8 @@ a * {
 .clickable:hover,
 .clickable:hover *,
 .action_issue:hover *,
+.submenu tr.entry:hover,
+.editormenu li:hover,
 a:hover,
 a:hover * {
     color: hsl(0, 0%, 100%)!important;
@@ -156,9 +160,21 @@ body,
 .tv_content,
 .editor_border,
 .editor_outer,
+.editormenu,
+.submenu,
+.submenulist,
+.submenu tr.entry:hover,
 .curwaitmsg {
     background: hsl(0, 0%, 14%)!important;
 }
+
+.editormenu li {
+  border-color: hsl(0, 0%, 14%)!important;
+}
+.editormenu li:hover {
+  border-color: hsl(0, 0%, 70%)!important;
+}
+
 .curtext {
   color: inherit !important;
 }
@@ -186,7 +202,7 @@ body,
     border-color: hsl(0, 0%, 0%)!important;
     outline: none!important;
 }
-input,
+input:not(.CodeMirror-search-field),
 textarea,
 select {
     background: hsl(0, 0%, 12%)!important;
@@ -195,7 +211,7 @@ select {
     color: hsl(0, 0%, 76%)!important;
     transition: background .3s, box-shadow .3s!important;
 }
-input:focus,
+input:focus:not(.CodeMirror-search-field),
 textarea:focus,
 select:focus {
     background: hsl(0, 0%, 11%)!important;
@@ -217,7 +233,8 @@ input[type="checkbox"] {
 }
 .scripttable tr,
 .section,
-.actiontable {
+.actiontable,
+.editor_container_o {
     background: hsl(0, 0%, 14%)!important;
     border-width: 1px 0 0 0!important;
     color: hsl(0, 0%, 70%)!important;
@@ -276,6 +293,9 @@ input[type="button"]:hover *,
 }
 .icon16 {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.17) 20%, rgba(255, 255, 255, 0) 80%)
+}
+.nameNOicon16 {
+    background: unset !important;
 }
 .footer {
     display: block !important;
