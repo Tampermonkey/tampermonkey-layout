@@ -283,6 +283,8 @@ a:hover * {
 }
 html {
     background: hsl(0, 0%, 14%)!important;
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
 }
 .ask_action_buttons a,
 .footer a,
