@@ -875,7 +875,8 @@ html.darker .tv_contents,
         scrollbar-width: auto !important;
     }
 
-    .darker .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+    .darker .CodeMirror-scrollbar-filler,
+    .darker .CodeMirror-gutter-filler {
         background: hsl(0, 0%, 18%)!important;
     }
 
