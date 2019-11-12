@@ -870,12 +870,12 @@ html.darker .tv_contents,
 }
 
 @supports(-moz-image-region:inherit) {
-    * {
+    .darker * {
         scrollbar-color: hsl(0, 0%, 30%) hsl(0, 0%, 18%) !important;
         scrollbar-width: auto !important;
     }
 
-    .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+    .darker .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
         background: hsl(0, 0%, 18%)!important;
     }
 
