@@ -317,7 +317,7 @@ html.darker .tv_selected {
 }
 
 .darker .scripttable td {
-    padding: 2px 5px !important
+    padding: 3px 5px !important
 }
 
 .darker .scripttable td:last-child {
@@ -529,7 +529,7 @@ html.darker .tv_contents,
 
 .darker .scripttable tr {
     background-color: hsl(0, 0%, 14%) !important;
-    border-width: 1px 0 0 0 !important;
+    border-width: 0 !important;
     border-color: transparent !important;
     color: hsl(0, 0%, 70%) !important
 }
