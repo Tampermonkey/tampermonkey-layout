@@ -22,6 +22,10 @@ html.darker,
     color: hsl(0, 0%, 66%)
 }
 
+.tv_tabs_table {
+    bottom: -3px !important
+}
+
 .darker .actiontable .script_name {
     max-width: 100% !important;
     padding: 0 !important
