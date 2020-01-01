@@ -22,7 +22,7 @@ html.darker,
     color: hsl(0, 0%, 66%)
 }
 
-.tv_tabs_table {
+.darker .tv_tabs_table {
     bottom: -3px !important
 }
 
@@ -119,7 +119,7 @@ html.darker,
     color: hsl(0, 0%, 100%) !important
 }
 
-.darker .tv_content:not(:only-child) {
+.darker .tv_content:not(:nth-last-of-type(2)):not(:only-child) {
     min-width: 100vw !important
 }
 
