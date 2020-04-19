@@ -299,25 +299,15 @@ html.darker .tv_selected {
 }
 
 .darker .scripttable tr.multiselectreplaced,
-.darker .scripttable tr:nth-of-type(4),
-.darker .scripttable tr:nth-of-type(4) ~ tr:nth-child(even) {
+.darker .scripttable tr:nth-child(even),
+.darker .scripttable tr:nth-child(even) + tr[style="display: none;"] ~ tr:nth-child(odd),
+.darker .scripttable tr:nth-child(odd) + tr[style="display: none;"] ~ tr:nth-child(odd) {
     background-color: hsla(0, 0%, 0%, .1) !important
 }
 
-.darker .scripttable tr:nth-of-type(4)[style="display: none;"] ~ tr:nth-child(odd) {
-    background-color: hsla(0, 0%, 0%, .1) !important
-}
-
-.darker .scripttable tr:nth-of-type(4)[style="display: none;"] ~ tr:nth-child(even) {
-    background-color: hsl(0, 0%, 14%) !important
-}
-
-.darker .scripttable tr:nth-of-type(3)[style="display: none;"] ~ tr:nth-child(odd) {
-    background-color: hsla(0, 0%, 0%, .1) !important
-}
-
-.darker .scripttable tr:nth-of-type(3)[style="display: none;"] ~ tr:nth-child(even) {
-    background-color: hsl(0, 0%, 14%) !important
+.darker .scripttable tr:nth-child(even) + tr[style="display: none;"] ~ tr:nth-child(even),
+.darker .scripttable tr:nth-child(odd) + tr[style="display: none;"] ~ tr:nth-child(even) {
+    background-color: transparent !important
 }
 
 .darker .scripttable td {
