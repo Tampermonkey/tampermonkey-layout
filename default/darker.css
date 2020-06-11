@@ -1304,13 +1304,7 @@ html.darker .cm-s-diff .CodeMirror-gutters {
     outline: none !important;
     border: 1px solid #000 !important;
     border-right: none !important;
-    box-shadow: 0 0 3px 0 hsl(0, 0%, 40%) !important;
-    transition: box-shadow .3s !important
-}
-
-.darker .CodeMirror-active .cm-s-default,
-.darker .CodeMirror-active.cm-s-diff {
-    box-shadow: 0 0 3px 0 hsl(0, 0%, 60%) !important
+    box-shadow: 0 0 3px 0 hsl(0, 0%, 40%) !important
 }
 
 .darker .cm-s-default .CodeMirror-linenumber,
