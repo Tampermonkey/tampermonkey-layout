@@ -119,8 +119,8 @@ html.darker,
     color: hsl(0, 0%, 100%) !important
 }
 
-.darker .tv_content:not(:nth-last-of-type(2)):not(:only-child) {
-    min-width: 100vw !important
+.darker .script_tab_head + .details > td {
+    padding: 0!important
 }
 
 .darker .nameNicon64 img[src$="+LB7zYrG4d7y2gL9ef73+ev31+uv1P/v6f+Xwu/VNHO2qAAAAAElFTkSuQmCC"] {
