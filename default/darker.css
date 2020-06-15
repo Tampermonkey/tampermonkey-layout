@@ -395,8 +395,8 @@ html.darker .tv_contents,
 }
 
 .darker #action {
-    max-height: 594px!important;
-    overflow: auto!important
+    max-height: 594px !important;
+    overflow: auto !important
 }
 
 .darker .actionlayout {
