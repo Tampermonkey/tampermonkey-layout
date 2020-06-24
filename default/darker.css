@@ -388,7 +388,7 @@ html.darker .tv_contents,
 }
 
 .darker body:not(.main) {
-    box-shadow: inset 0 0 0 1px hsl(0, 0%, 20%), inset 0 0 0 2px hsl(0, 0%, 0%), inset 0 0 0 3px hsl(0, 0%, 20%) !important;
+    box-shadow: inset 0 0 0 1px hsl(0, 0%, 0%), inset 0 0 0 2px hsl(0, 0%, 20%), inset 0 0 0 3px hsl(0, 0%, 0%) !important;
     box-sizing: border-box !important;
     padding: 3px !important;
     max-height: 600px !important
