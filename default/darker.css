@@ -31,37 +31,42 @@ html.darker,
     padding: 0 !important
 }
 
+.darker .action .social {
+  -webkit-filter: invert(0.8) grayscale(1);
+  filter: invert(0.8) grayscale(1);
+}
+
 .darker .actionpostr > .actionpostd:not(:first-of-type) {
     box-shadow: -1px 0 0 0 hsl(0, 0%, 7%), -2px 0 0 0 hsl(0, 0%, 22%), -3px 0 0 0 hsl(0, 0%, 7%) !important;
     overflow: hidden !important
 }
 
-.darker .actiontable table > tr.scriptmenu > td:nth-child(1) {
+.darker .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(1) {
     display: none !important
 }
 
-.darker .actiontable table > tr.scriptmenu > td:nth-child(2) {
+.darker .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) {
     width: 100% !important;
     padding: 0 0 0 2.3em !important;
     box-sizing: border-box !important
 }
 
-.darker .show_scriptmenu > tr:first-of-type > td {
+.darker .show_moremenu > tr:first-of-type > td {
     box-shadow: none !important
 }
 
-.darker .actionpostd:only-of-type .actiontable table > tr:not(.scriptmenu) > td {
+.darker .actionpostd:only-of-type .actiontable table > tr.script > td {
     box-shadow: inset 0 1px 0 0 #000, inset 0 2px 0 0 hsl(0, 0%, 18%), 0 1px 0 0 #000, 0 2px 0 0 hsl(0, 0%, 20%)
 }
 
-.darker .actionpostd:only-of-type:nth-of-type(2) .actiontable > tr:nth-child(odd) table > tr:not(.scriptmenu) > td,
-.darker .actionpostd:only-of-type:nth-of-type(3) .actiontable > tr:nth-child(even) table > tr:not(.scriptmenu) > td,
-.darker .actionpostd:only-of-type > .actionregion .actiontable > tr:nth-child(odd) table > tr:not(.scriptmenu) > td {
+.darker .actionpostd:only-of-type:nth-of-type(2) .actiontable > tr:nth-child(odd) table > tr.script > td,
+.darker .actionpostd:only-of-type:nth-of-type(3) .actiontable > tr:nth-child(even) table > tr.script > td,
+.darker .actionpostd:only-of-type > .actionregion .actiontable > tr:nth-child(odd) table > tr.script > td {
     box-shadow: inset 0 1px 0 0 #000, inset 0 2px 0 0 hsl(0, 0%, 20%), 0 1px 0 0 #000, 0 2px 0 0 hsl(0, 0%, 18%)
 }
 
-.darker .actiontable table > tr:not(.scriptmenu) > td,
-.darker .actiontable table > tr.scriptmenu:last-child > td {
+.darker .actiontable table > tr.script > td,
+.darker .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle):last-child > td {
     box-shadow: 0 1px 0 0 #000, 0 2px 0 0 hsl(0, 0%, 22%)
 }
 
@@ -71,7 +76,7 @@ html.darker,
     background-color: hsla(0, 0%, 0%, .2) !important
 }
 
-.darker .scriptmenu {
+.darker .moremenu > tr:not(.script):not(.moremenu_toggle) {
     background-color: transparent !important
 }
 
@@ -119,8 +124,8 @@ html.darker,
     color: hsl(0, 0%, 100%) !important
 }
 
-.darker .script_tab_head + .details > td {
-    padding: 0!important
+.darker .tv_content:not(:nth-last-of-type(2)):not(:only-child) {
+    min-width: 100vw !important
 }
 
 .darker .nameNicon64 img[src$="+LB7zYrG4d7y2gL9ef73+ev31+uv1P/v6f+Xwu/VNHO2qAAAAAElFTkSuQmCC"] {
@@ -358,7 +363,7 @@ html.darker .tv_selected {
 }
 
 .darker .actiontable tr:hover {
-    background-color: transparent !important
+    background: none !important;
 }
 
 .darker html {
@@ -385,18 +390,6 @@ html.darker .tv_contents,
 
 .darker .curtext {
     color: inherit !important
-}
-
-.darker body:not(.main) {
-    box-shadow: inset 0 0 0 1px hsl(0, 0%, 0%), inset 0 0 0 2px hsl(0, 0%, 20%), inset 0 0 0 3px hsl(0, 0%, 0%) !important;
-    box-sizing: border-box !important;
-    padding: 3px !important;
-    max-height: 600px !important
-}
-
-.darker #action {
-    max-height: 594px !important;
-    overflow: auto !important
 }
 
 .darker .actionlayout {
@@ -700,14 +693,14 @@ html.darker .tv_contents,
     align-items: center !important
 }
 
-.darker .actiontable table > tr:not(.scriptmenu),
-.darker .actiontable table.show_scriptmenu > tr.scriptmenu,
+.darker .actiontable table > tr.script,
+.darker .actiontable table.show_moremenu > tr:not(.script):not(.moremenu_toggle),
 .darker .actiontable:not([class*="at_scripts"]) > tr,
 .darker .actiontable.at_scripts_new > tr {
     display: inline-flex !important
 }
 
-.darker .actiontable .actionenablercol {
+.darker .actiontable .moremenuenabler > div {
     padding: 0 !important;
     text-align: center !important;
     height: 30px !important
@@ -725,13 +718,13 @@ html.darker .tv_contents,
     align-items: center !important
 }
 
-.darker .actionenablercol .fa-minus,
-.darker .actionenablercol .fa-plus {
+.darker .moremenuenabler .fa-minus,
+.darker .moremenuenabler .fa-plus {
     display: none !important
 }
 
-.darker div[class="actionenablercol enabled"] .fa-minus,
-.darker div[class="actionenablercol"] .fa-plus {
+.darker .moremenuenabler.enabled .fa-minus,
+.darker .moremenuenabler .fa-plus {
     display: inline-flex !important
 }
 
@@ -762,7 +755,7 @@ html.darker .tv_contents,
     max-width: 400px !important
 }
 
-.darker .actiontable table > tr.scriptmenu > td:nth-child(2) > span {
+.darker .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) > span {
     max-width: 394px !important
 }
 
@@ -770,7 +763,7 @@ html.darker .tv_contents,
     max-width: 300px !important
 }
 
-.darker .actionpostr > .actionpostd:nth-of-type(2) .actiontable table > tr.scriptmenu > td:nth-child(2) > span {
+.darker .actionpostr > .actionpostd:nth-of-type(2) .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) > span {
     max-width: 294px !important
 }
 
@@ -781,8 +774,8 @@ html.darker .tv_contents,
     box-sizing: border-box
 }
 
-.darker .actionpostr > .actionpostd:nth-of-type(2):nth-last-of-type(2) .actiontable table > tr.scriptmenu > td:nth-child(2) > span,
-.darker .actionpostr > .actionpostd:nth-of-type(3) .actiontable table > tr.scriptmenu > td:nth-child(2) > span {
+.darker .actionpostr > .actionpostd:nth-of-type(2):nth-last-of-type(2) .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) > span,
+.darker .actionpostr > .actionpostd:nth-of-type(3) .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) > span {
     max-width: 194px !important;
     padding-right: 4px;
     box-sizing: border-box
@@ -800,7 +793,7 @@ html.darker .tv_contents,
     overflow: hidden
 }
 
-.darker .actiontable table > tr.scriptmenu > td:nth-child(2) > span {
+.darker .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) > span {
     width: 100% !important;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -808,7 +801,7 @@ html.darker .tv_contents,
 }
 
 .darker .actiontable table > tr > td:nth-child(2) > div,
-.darker .actiontable table > tr.scriptmenu > td:nth-child(2) {
+.darker .actiontable table.moremenu > tr:not(.script):not(.moremenu_toggle) > td:nth-child(2) {
     overflow: hidden !important
 }
 
@@ -876,7 +869,6 @@ html.darker .tv_contents,
 }
 
 @supports(-moz-image-region:inherit) {
-    .darker,
     .darker * {
         scrollbar-color: hsl(0, 0%, 30%) hsl(0, 0%, 18%) !important;
         scrollbar-width: auto !important;
@@ -948,6 +940,14 @@ html.darker .tv_contents,
 }
 
 @supports not (-moz-image-region:inherit) {
+    .darker #action {
+        box-shadow: inset 0 0 0 1px hsl(0, 0%, 7%), 0 0 0 1px hsl(0, 0%, 7%) !important;
+        border: 1px solid hsl(0, 0%, 22%) !important;
+        box-sizing: border-box !important;
+        padding: 1px 1px 2px !important;
+        margin: 1px 1px 1px !important
+    }
+
     .darker button:hover,
     .darker input[type="button"]:hover,
     .darker .button:hover {
@@ -1309,7 +1309,13 @@ html.darker .cm-s-diff .CodeMirror-gutters {
     outline: none !important;
     border: 1px solid #000 !important;
     border-right: none !important;
-    box-shadow: 0 0 3px 0 hsl(0, 0%, 40%) !important
+    box-shadow: 0 0 3px 0 hsl(0, 0%, 40%) !important;
+    transition: box-shadow .3s !important
+}
+
+.darker .CodeMirror-active .cm-s-default,
+.darker .CodeMirror-active.cm-s-diff {
+    box-shadow: 0 0 3px 0 hsl(0, 0%, 60%) !important
 }
 
 .darker .cm-s-default .CodeMirror-linenumber,
