@@ -753,7 +753,7 @@ html.darker .tv_contents,
   position: absolute!important;
   top: 0!important;
   left: 0!important;
-  z-index: 1!important;
+  pointer-events: none!important
 }
 
 .darker .actiontable.at_commands .actiontable.at_commands > tr > td:first-child {
@@ -764,7 +764,9 @@ html.darker .tv_contents,
   position: relative!important;
 }
 
-.darker .actiontable .moremenu > tr > :first-child {
+.darker .actiontable .moremenu > tr:not(.moremenu_toggle) > :first-child,
+.darker .actiontable .moremenu > tr.moremenu_toggle > :first-child .script_name,
+.darker .actiontable .at_commands .moremenu > tr.moremenu_toggle > :first-child > .clickable {
   padding-left: 36px!important;
 }
 
