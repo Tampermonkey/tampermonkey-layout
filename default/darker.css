@@ -18,8 +18,28 @@ html.darker,
 .darker .curwaitmsg *,
 .darker .external_desc,
 .darker .external_label,
-.darker .script_desc {
+.darker .script_desc,
+.darker dt,
+.darker dd {
   color: hsl(0, 0%, 66%)
+}
+
+.darker .trash_script_details,
+.darker .trash_actions {
+  background-color: hsl(0, 0%, 18%)!important;
+  border: 1px solid #000!important;
+  box-shadow: inset 0 0 0 1px hsl(0, 0%, 24%), 0 0 0 1px hsl(0, 0%, 24%)!important;
+}
+
+.darker .tv_tab[tvid="trash"] > div {
+  font-size: 0!important;
+}
+
+.darker .tv_tab[tvid="trash"] > div:before {
+  content: '\f2ed'!important;
+  font-family: 'Font Awesome 5 Regular'!important;
+  font-weight: 400!important;
+  font-size: 16px!important;
 }
 
 .darker .tv_tabs_table {
@@ -764,6 +784,11 @@ html.darker .tv_contents,
   position: relative!important;
 }
 
+.darker .was_deleted {
+  pointer-events: none!important;
+}
+
+.darker .was_deleted .script_name,
 .darker .actiontable .moremenu > tr:not(.moremenu_toggle) > :first-child,
 .darker .actiontable .moremenu > tr.moremenu_toggle > :first-child .script_name,
 .darker .actiontable .at_commands .moremenu > tr.moremenu_toggle > :first-child > .clickable {
