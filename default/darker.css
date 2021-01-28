@@ -632,6 +632,13 @@ html.darker .tv_contents,
   color: hsl(0, 0%, 96%)!important
 }
 
+.darker button[disabled],
+.darker input[type="button"][disabled],
+.darker .button[disabled] {
+  pointer-events: none!important;
+  opacity: .7!important;
+}
+
 .darker button *,
 .darker input[type="button"] *,
 .darker .button * {
