@@ -1350,6 +1350,10 @@ html.darker .tv_contents,
   background-color: hsla(360, 100%, 50%, .4)!important
 }
 
+.darker .cm-s-default .cm-matchhighlight {
+  background-color: #4b4848;
+}
+
 html.darker .cm-s-default .CodeMirror-gutters,
 html.darker .cm-s-diff .CodeMirror-gutters {
   border-right: 1px solid hsl(0, 0%, 0%)!important
