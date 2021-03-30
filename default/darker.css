@@ -342,8 +342,8 @@ html.darker .tv_selected {
 .darker .scripttable .clickable:hover .greyed,
 .darker .actiontable .clickable.not_executed:hover *,
 .moremenuenabler:hover *,
-body > div.action .clickable:hover .far.fa-bug,
-body .clickable:hover .far.orange {
+.darker body > div.action .clickable:hover .far.fa-bug,
+.darker body .clickable:hover .far.orange {
   color: hsl(0, 0%, 100%)!important
 }
 
